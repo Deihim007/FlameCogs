@@ -1854,10 +1854,12 @@ class MonopolyGame():
 							)
 			self.imgcache['numhouse']['image'] = img
 		#END
-		if darkMode:
-			img = Image.open(bundled_data_path(self.cog) / 'dark.png')
-		else:
-			img = Image.open(bundled_data_path(self.cog) / 'light.png')
+		# if darkMode:
+		# 	img = Image.open(bundled_data_path(self.cog) / 'dark.png')
+		# else:
+		# 	img = Image.open(bundled_data_path(self.cog) / 'light.png')
+		img = Image.open(bundled_data_path(self.cog) / 'default.png')
+
 		for value in self.imgcache.values():
 			img.paste(value['image'], box=(0, 0), mask=value['image'])
 		temp = BytesIO()
